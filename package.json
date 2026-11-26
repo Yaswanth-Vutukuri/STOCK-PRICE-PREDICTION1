@@ -1,0 +1,12 @@
+{
+  "name": "stock-price-predictor",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pure Java 25 AWT + JDBC + SQLite desktop application for CSE 213 Advanced Java Programming at SRM University AP.",
+  "scripts": {
+    "build": "(command -v mvn >/dev/null 2>&1 || (apt-get update -qq && DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommends openjdk-25-jdk maven xvfb)) && mvn -B clean compile dependency:build-classpath -Dmdep.outputFile=target/classpath.txt",
+    "lint": "mvn -B validate compile",
+    "start": "sh scripts/dev.sh",
+    "dev": "sh scripts/dev.sh"
+  }
+}
